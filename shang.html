@@ -1404,11 +1404,11 @@
           If you ever forget how special you are<br><br>
           Come back and read this again<br><br>
           I'll always believe in you, even on the days when it's hard for you to believe in yourself. 
-          <br><br>I'll always be proud of you.
+          <br><br>I'll always be proud of you, shang.
         </div>
       </div>
 
-      <p class="hint">Shang try clicking the heart 20 times slowly!</p>
+      <p class="hint">Try clicking the heart 20 times slowly!</p>
     </div>
   </div>
 
@@ -1466,18 +1466,18 @@
   <!-- Night Sky Section -->
   <div id="sky" class="section">
     <div class="night-sky-container">
-      <h2>🌙 A Sky Full of Things I Never Want You to Forget 🌙</h2>
-      <p class="night-sky-subtitle">Every fragments holds something I wanted to tell you.</p>
+      <h2>🌙 A sky full of possibilities 🌙</h2>
+      <p class="night-sky-subtitle">Every fragments holds a little reminder of the beautiful things that may still be waiting for you.</p>
 
       <div class="stars-container" id="starsContainer">
         <!-- canvas and stars are injected here -->
       </div>
 
       <div class="stars-legend" id="starsLegend" aria-hidden="false">
-        <div class="legend-item">⭐ Memory</div>
-        <div class="legend-item">💜 Compliment</div>
-        <div class="legend-item">🌠 Wish</div>
-        <div class="legend-item">🤫 Secret</div>
+        <div class="legend-item">⭐ Dreams</div>
+        <div class="legend-item">💜 Reminders</div>
+        <div class="legend-item">🌠 Possibilities</div>
+        <div class="legend-item">🤫 Hopes</div>
       </div>
 
       <div class="stars-discovered" id="starsDiscovered">Stars discovered: 0/20</div>
@@ -1604,38 +1604,38 @@
 
   <script>
     const CONFIG = {
-      PASSWORD: 'elaybaho',
+      PASSWORD: 'santomama',
       SONG_URL: 'https://raw.githubusercontent.com/redzkii/cha/main/Niall Horan - This Town (Official Lyric Video) (2).mp3',
-      PUZZLE_IMAGE: 'https://raw.githubusercontent.com/redzkii/cha/main/1000056468.jpg',
+      PUZZLE_IMAGE: 'https://raw.githubusercontent.com/redzkii/shang/main/IMG_20241221_143147.jpg',
       PUZZLE_ROWS: 3,
       PUZZLE_COLS: 4,
       PUZZLE_SIZE: 400,
-      SECRET_MESSAGE: 'Baby out of all the people I couldve met, ikaw talaga yung naging favorite person ko, the more I get to know you, the more I realize that youre the person I want to choose every single day, I know were not perfect and there are times na nagkakaroon tayo ng misunderstandings, pero one thing ill never be confused about is how much i love you, ikaw pa rin yung taong gusto kong kausapin tyka makasama no matter how messy things get, thank you for being patient with me, for understanding me and for staying even when things arent always easy, regardless of what happens, I want you to know na sincere ako sa lahat ng nararamdaman ko para sayo, I love you baby.',
+      SECRET_MESSAGE: 'Remember this re that sometimes life feels like a puzzle where some pieces don't seem to fit and some days feel harder than others, there are times na mahirap intindihin ng lahat, kahit gawin mo na lahat ng best mo riyan pero minsan parang kulang pa rin talaga, every piece of you has a reason, yung mga bagay na pinagdaanan mo, yung mga araw na akala mo hindi mo kakayanin tapos nalagpasan mo tyka yung mga maliliit na bagay pa na ginagawa mo para sa ibang tao, lahat ng yon naging parte ng kung sino ka ngayon, I hope you never forget re that you're someone worth knowing, someone worth keeping, and someone who deserves good things, huwag ka maging tanga tyka hindi mo kailangang madaliin lahat kapag may prob ka, take your time lang, rest when you need to and don't be too hard on yourself kapag hindi ka okay, some of the best things take time to come together kaya you don't have to rush becoming the person you want to be, sobra dami mo nang nalagpasan e, saksi riyan re kahit minsan hindi mo napapansin kung gaano ka na kalayo sa dati, I hope this year gives you more reasons to smile tyka madami pang beses na mararamdaman mong proud ka sa sarili mo, don't forget to be kind to yourself, okay? kahit may araw na hindi mo nakikita yung worth mo kasi bulag ka tanga, proud pa rin sayo re for making it this far, hindi lang dahil sa mga bagay na naachieve mo na pero dahil hindi ka nag give up kahit sobra bigat na, happy birthday shang, madami pa sana bd ah.',
       SNAP_DISTANCE: 50,
       MOBILE_SNAP_DISTANCE: 70
     };
 
     const STAR_MESSAGES = [
-      {type:'Memory', emoji:'⭐', message:"I still remember staying up with you until dawn, I didn't realize how quickly you'd become someone important to me."},
-      {type:'Compliment', emoji:'💜', message:"One thing I love about you is how you keep going even when things aren't easy."},
-      {type:'Wish', emoji:'🌠', message:"I hope someday we'll watch the sunset together and talk about everything and nothing."},
-      {type:'Secret', emoji:'🤫', message:"Sometimes I catch myself smiling because of a conversation we had hours ago."},
-      {type:'Memory', emoji:'⭐', message:"I still remember when we played rb together, it became one of my favorite memories because I got to spend time with you."},
-      {type:'Compliment', emoji:'💜', message:"If you could see yourself through my eyes for a day, you'd understand why I admire you so much."},
-      {type:'Wish', emoji:'🌠', message:"I want to be the person you run to when you're happy, sad, or just need someone to listen."},
-      {type:'Secret', emoji:'🤫', message:"You probably don't know this, but sometimes my thoughts about you are a lot less innocent than they seem haha."},
-      {type:'Memory', emoji:'⭐', message:"I remember telling you things I've never told anyone. Thank you for being someone I can trust."},
-      {type:'Compliment', emoji:'💜', message:"Your eyes are one of the prettiest things about you."},
-      {type:'Wish', emoji:'🌠', message:"I dream about a future where we're both happy and successful and somehow we're still choosing each other every day."},
-      {type:'Secret', emoji:'🤫', message:"If life goes the way I'm hoping, I'd marry you as soon as possible."},
-      {type:'Memory', emoji:'⭐', message:"You wouldn't let me call you by haha."},
-      {type:'Compliment', emoji:'💜', message:"I admire how you're always trying to become a better version of yourself."},
-      {type:'Wish', emoji:'🌠', message:"I hope you keep finding reasons to smile even on the days when things don't go your way."},
-      {type:'Secret', emoji:'🤫', message:"There are times when something reminds me of you and suddenly you're all I can think about."},
-      {type:'Memory', emoji:'⭐', message:"When you gave me lines in mb and my part barely lasted one second."},
-      {type:'Compliment', emoji:'💜', message:"You're beautiful in a way that's hard to put into words."},
-      {type:'Wish', emoji:'🌠', message:"I wish one day we'll look back at these moments and smile at how far we've come."},
-      {type:'Brightest Star', emoji:'🌟', message:"Out of all the stars here, this one is my favorite. Just like out of everyone I've met, you're my favorite person."}
+      {type:'Dreams', emoji:'⭐', message:"One day, you'll get to see the places you've always wanted to visit."},
+      {type:'Reminders', emoji:'💜', message:"Remember that your feelings and thoughts are always important."},
+      {type:'Possibilities', emoji:'🌠', message:"There are still people you haven't met who may become an important part of your life."},
+      {type:'Hopes', emoji:'🤫', message:"I hope you always find reasons to smile, even on the days when things feel heavy."},
+      {type:'Dreams', emoji:'⭐', message:"One day, you'll see yourself becoming the person you always wanted to be."},
+      {type:'Reminders', emoji:'💜', message:"Remember that you deserve to celebrate yourself, not only when you succeed but also when you try."},
+      {type:'Possibilities', emoji:'🌠', message:"There are still things waiting to surprise you in the best ways."},
+      {type:'Hopes', emoji:'🤫', message:"I hope you learn that loving someone should never mean losing yourself."},
+      {type:'Dreams', emoji:'⭐', message:"One day, you'll experience the happiness you've always wanted to feel."},
+      {type:'Reminders', emoji:'💜', message:"Remember that the parts of yourself you struggle to accept are still parts that deserve care."},
+      {type:'Possibilities', emoji:'🌠', message:"There are moments when you'll look back and understand why things happened the way they did."},
+      {type:'Hopes', emoji:'🤫', message:"I hope you always feel loved and appreciated by the people who matter to you."},
+      {type:'Dreams', emoji:'⭐', message:"One day, you'll wake up living a life that feels like the one you've always imagined."},
+      {type:'Reminders', emoji:'💜', message:"Remember that there are people who appreciate you even when you don't notice it."},
+      {type:'Possibilities', emoji:'🌠', message:"There are still experiences that may change the way you see the world."},
+      {type:'Hopes', emoji:'🤫', message:"I hope you live a life where you never have to question if you are enough."},
+      {type:'Dreams', emoji:'⭐', message:"One day, you'll celebrate the achievements you once thought were far away."},
+      {type:'Reminders', emoji:'💜', message:"Remember that the things you think are ordinary about yourself may be the things others admire the most."},
+      {type:'Possibilities', emoji:'🌠', message:"There will be times when college won't go the way you expect, but keep trying because every step still matters."},
+      {type:'Believe', emoji:'🌟', message:"You are stronger than the hard days you face. You still have dreams to reach, memories to make, and many reasons to keep moving forward."}
     ];
 
     const STAR_CONFIG = {
@@ -2257,7 +2257,7 @@
         input.value = '';
       } else {
         const emoji = ['😢', '🙈', '😕', '😤', '🤔', '🥺'];
-        const msg = ['Ano na HAHAHA', 'Nice try', 'Kaya pa ba boss?', 'Try again'];
+        const msg = ['Ano na', 'Nice try', 'Kaya pa ba?', 'Tanga mo naman'];
         document.getElementById('wrongPasswordMessage').innerHTML = `
           <div class="wrong-password-emoji">${emoji[Math.floor(Math.random() * emoji.length)]}</div>
           <div class="wrong-password-message">${msg[Math.floor(Math.random() * msg.length)]}</div>
@@ -2268,7 +2268,7 @@
     }
 
     function showPasswordHint() {
-      const hints = ['Clue 1: Starts with e', 'Clue 2: Meron baho sa pass haha', 'Clue 3: try mo na elay + baho'];
+      const hints = ['Clue 1: Starts with s', 'Clue 2: Nanickname ko na sayo to dati', 'Clue 3: Try mo na santomama'];
       const hintDisplay = document.getElementById('hintDisplay');
       const hintButton = document.getElementById('hintButton');
       
