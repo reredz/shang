@@ -284,7 +284,6 @@
       font-style: italic;
     }
 
-    /* Password Screen Styles */
     #passwordScreen {
       display: flex;
       justify-content: center;
@@ -422,7 +421,6 @@
       animation: slideIn 0.3s ease-out;
     }
 
-    /* PUZZLE STYLES */
     .puzzle-wrapper {
       display: flex;
       flex-direction: row;
@@ -587,7 +585,6 @@
       text-align: center;
     }
 
-    /* Photo Gallery Styles */
     .photo-gallery-wrapper {
       margin-top: 30px;
     }
@@ -647,7 +644,6 @@
       opacity: 1;
     }
 
-    /* Modal Styles */
     .modal {
       display: none;
       position: fixed;
@@ -733,7 +729,6 @@
       transform: scale(1.1);
     }
 
-    /* Nature Gallery Styles */
     .nature-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -782,7 +777,6 @@
       line-height: 1.5;
     }
 
-    /* Songs Section Styles */
     .songs-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -841,7 +835,6 @@
       font-style: italic;
     }
 
-    /* Night Sky Styles */
     #sky {
       background: linear-gradient(180deg, #0a0e27 0%, #1a1a3e 50%, #0a0e27 100%);
       padding: 40px 20px;
@@ -949,7 +942,6 @@
       font-weight: 500;
     }
 
-    /* Star Message Modal */
     .star-message-modal {
       display: none;
       position: fixed;
@@ -1014,7 +1006,6 @@
       font-weight: 300;
     }
 
-    /* Twinkle + shooting star */
     @keyframes twinkle {
       0%, 100% { opacity: 1; transform: scale(1); }
       40% { opacity: 0.65; transform: scale(0.92); }
@@ -1022,7 +1013,6 @@
     }
 
     .star {
-      /* apply twinkle by default but durations and delays will be set per-star inline */
       animation-name: twinkle;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in-out;
@@ -1030,7 +1020,6 @@
       animation-delay: var(--twinkle-delay, 0s);
     }
 
-    /* Shooting star element */
     .shooting-star {
       position: absolute;
       pointer-events: none;
@@ -1152,7 +1141,6 @@
         max-height: 60vh;
       }
 
-      /* MOBILE PUZZLE IMPROVEMENTS */
       .puzzle-wrapper {
         gap: 15px;
       }
@@ -1204,7 +1192,6 @@
         margin-bottom: 15px;
       }
 
-      /* Better touch targets for mobile */
       .puzzle-piece {
         min-width: 70px;
         min-height: 70px;
@@ -1315,7 +1302,6 @@
       transition: all 0.7s ease;
     }
 
-    /* Respect reduced motion preference */
     @media (prefers-reduced-motion: reduce) {
       .star, .heart, .puzzle-piece, .confetti, .shooting-star {
         animation: none !important;
@@ -1327,7 +1313,7 @@
 <body>
   <button class="music-player" id="musicPlayer" onclick="toggleMusic()" title="Toggle background music">
     🎵
-    <div class="music-player-tooltip">Flower - Samantha Elbert</div>
+    <div class="music-player-tooltip">Flower - Samantha Ebert</div>
   </button>
   <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()" title="Scroll to top">↑</button>
 
@@ -1336,7 +1322,7 @@
   <div id="passwordScreen">
     <div class="password-container">
       <h2 class="password-title">This is something I made just for you</h2>
-      <p class="password-subtitle">Try to guess shang bago mo pindutin yung hint.</p>
+      <p class="password-subtitle">Try to guess shang before clicking the hint.</p>
       
       <div class="password-input-group">
         <input 
@@ -1358,14 +1344,13 @@
 
   <div class="nav-tabs">
     <button class="nav-button active" onclick="showSection('home')">🏠 Home</button>
-    <button class="nav-button" onclick="showSection('photos')">📸 Photos</button>
+    <button class="nav-button" onclick="showSection('photos')">✍️ Photos</button>
     <button class="nav-button" onclick="showSection('puzzle')">🧩 Puzzle</button>
-    <button class="nav-button" onclick="showSection('sky')">🌙 Night Sky</button>
+    <button class="nav-button" onclick="showSection('sky')">🌙 Sky</button>
     <button class="nav-button" onclick="showSection('nature')">🌿 Nature</button>
     <button class="nav-button" onclick="showSection('songs')">🎵 Songs</button>
   </div>
 
-  <!-- Home Section -->
   <div id="home" class="section active">
     <div class="container">
       <h1>To The Girl Who Forgets How Amazing She Is</h1>
@@ -1412,11 +1397,10 @@
     </div>
   </div>
 
-  <!-- Photo Gallery Section -->
   <div id="photos" class="section">
     <div class="container">
-      <h2>✨ Celestial ✨</h2>
-      <p class="subtitle">If my camera roll could choose a favorite, it would look exactly like this.</p>
+      <h2>✍️ Notes to keep ✍️</h2>
+      <p class="subtitle">A few things I wanted you to know.</p>
       
       <div class="photo-gallery-wrapper">
         <div class="photo-grid" id="photoGrid"></div>
@@ -1424,7 +1408,6 @@
     </div>
   </div>
 
-  <!-- Modal for photos -->
   <div id="photoModal" class="modal" onclick="closePhotoModal(event)" role="dialog" aria-modal="true" aria-labelledby="modalCaption">
     <div class="modal-content" onclick="event.stopPropagation()">
       <button class="close-modal" onclick="closePhotoModal()" aria-label="Close">×</button>
@@ -1433,14 +1416,13 @@
     </div>
   </div>
 
-  <!-- Puzzle Section -->
   <div id="puzzle" class="section">
     <div class="container">
       <h2>🧩 Puzzle 🧩</h2>
       <p class="subtitle">Not every piece makes sense now, but someday it all will.</p>
       
       <div class="puzzle-instructions">
-        💝 Drag mo puzzle sa white box sa left side, kapag nabuo mo tingnan mo lalabas sa baba. 
+        Drag mo puzzle sa white box sa left side, kapag nabuo mo tingnan mo lalabas sa baba. 
       </div>
 
       <div class="puzzle-wrapper">
@@ -1463,14 +1445,12 @@
     </div>
   </div>
 
-  <!-- Night Sky Section -->
   <div id="sky" class="section">
     <div class="night-sky-container">
       <h2>🌙 A Sky Beyond Limits 🌙</h2>
       <p class="night-sky-subtitle">Every fragments holds something I wanted to tell you.</p>
 
       <div class="stars-container" id="starsContainer">
-        <!-- canvas and stars are injected here -->
       </div>
 
       <div class="stars-legend" id="starsLegend" aria-hidden="false">
@@ -1484,7 +1464,6 @@
     </div>
   </div>
 
-  <!-- Star modal -->
   <div id="starMessageModal" class="star-message-modal" onclick="closeStarMessage(event)" role="dialog" aria-modal="true" aria-labelledby="starMessageType">
     <div class="star-message-content" onclick="event.stopPropagation()">
       <button onclick="closeStarMessage()" aria-label="Close">×</button>
@@ -1494,7 +1473,6 @@
     </div>
   </div>
 
-  <!-- Nature Section -->
   <div id="nature" class="section">
     <div class="container">
       <h2>🍃 When Nature Speaks 🍃</h2>
@@ -1545,11 +1523,10 @@
     </div>
   </div>
 
-  <!-- Songs Section -->
   <div id="songs" class="section">
     <div class="container">
       <h2>🎵 Songs That Remind Me of You 🎵</h2>
-      <p class="subtitle">These songs remind you to keep going.</p>
+      <p class="subtitle">A few songs I chose because I thought you might like them.</p>
       
       <div class="songs-container">
         <div class="song-card">
@@ -1591,7 +1568,7 @@
           <div style="font-size: 30px; margin-bottom: 10px;">🎶</div>
           <div class="song-title">Para</div>
           <div class="song-artist">Renard Bugash</div>
-          <div class="song-reason">Asking for help doesn't make you weak.</div>
+          <div class="song-reason">Asking for help doesn't make you weak. You are allowed to need someone too.</div>
           <div class="song-note">💭 "Di na kailangan pang itago, ang mga luha sa iyong mata"</div>
         </div>
       </div>
@@ -1610,7 +1587,7 @@
       PUZZLE_ROWS: 3,
       PUZZLE_COLS: 4,
       PUZZLE_SIZE: 400,
-      SECRET_MESSAGE: 'Remember re that sometimes life feels like a puzzle, may mga pieces na hindi agad nagtutugma sa una kaya mahirap talagang intindihin, kumbaga minsan kahit ibigay mo na yung best mo, nagiging magulo pa rin talaga, pero hindi ibig sabihin nun na wala nang sense lahat yon, every piece has a reason, alam kong hindi naging madali yung mga pinagdadaanan mo, lalo na yung mga bagay na nanggagaling sa mga taong dapat sana unang nakakaintindi at nagbibigay ng comfort sayo, pero kaya ko sinasabi na sana unti unti mong matutunang mawalan ng pake sa mga masasakit na salitang binabato sayo, hindi dahil madali lang gawin yon, kundi dahil alam ko kung gaano kabigat yung epekto non sayo. I know how much those words stay in your mind and I dont want you to keep letting them destroy the way you see yourself, okay lang masaktan, magalit tyka mapagod, hindi ka masamang anak dahil don, pero you dont have to accept every hurtful word thrown at you just because it comes from someone close to you, sana unti unti mo matutunan kung paano protektahan yung sarili mo, kasi hindi porket galing sa taong malapit sayo, ibig sabihin tama na agad yung sinasabi nila tungkol sayo, hindi ko sinasabing bigla ka na lang dapat mawalan ng pake, I know it doesnt work that way and I know there will still be days na masasaktan ka talaga at ok lang yon, hindi naman mawawala agad yung sakit, pero sana dumating yung time na marinig mo man yung mga masasakit na sinasabi nila, hindi na siya kasing sakit ng nararamdaman mo ngayon tyka hindi na rin mananatili sa isip mo buong araw o buong linggo, habang hinihintay mo yung araw na yon, sana tulungan mo rin yung sarili mo na makarating don, nasayo yung desisyon kung hahayaan mo lang masira yung peace of mind mo ng mga bagay na hindi mo naman kontrolado o piliin mo unti unti bumangon para sa sarili mo, sasabihin mo hindi madaling gawin kasi mas madaling sabihin na mawalan ng pake diba kesa gawin talaga, pero naniniwala ako na kaya mo re, hindi mo naman kailangang pilitin yung sarili mong hindi masaktan, ang gusto ko lang sana huwag mong hayaan yung mga sinasabi sayo yung maging dahilan para questionin mo palagi yung existence mo, be kind to yourself re, youve already survived so much tyka siguro hindi mo lang napapansin kung gaano ka na kalayo from who you used to be, take your time and rest when you need to, some of the best things take time to come together, kaya kapag nawalan ka ng momentum sa buhay, bumangon ka lang ulit, parang ml lang yan, ok lang matalo basta huwag mo lang ibato cp mo at mag quit sa laro haha, sana hindi mo rin makalimutan na youre someone worth knowing, worth keeping, and someone who deserves good things, life is too short to spend all your energy on things you cant control, so choose your peace whenever you can, Im still proud of you kasi kahit sobrang bigat na, hindi ka pa rin sumusuko kahit sinasabi mong ayaw mo na, I hope this year gives you more reasons to smile, tyka madami pang beses na mararamdaman mong proud ka sa sarili mo, happy birthday shang, sana dumami pa birthdays mo kasi madami pang bote na itataob haha, keep your head up, Im always rooting for you re.',
+      SECRET_MESSAGE: 'Remember re that sometimes life feels like a puzzle, may mga pieces na hindi agad nagtutugma sa una kaya mahirap talagang intindihin, kumbaga minsan kahit ibigay mo na yung best mo, nagiging magulo pa rin talaga, pero hindi ibig sabihin non na wala nang sense lahat yon, every piece has a reason, alam kong hindi naging madali yung mga pinagdadaanan mo, lalo na yung mga bagay pa na nanggagaling sa mga taong dapat sana unang nakakaintindi at nagbibigay ng comfort sayo, pero kaya ko sinabi na sana unti unti mong matutunang mawalan ng pake sa mga masasakit na salitang binabato sayo, hindi ko sinasabi na madali lang gawin yon, kundi dahil alam ko kung gaano kabigat yung epekto non sayo. I know how much those words stay in your mind and I dont want you to keep letting them destroy the way you see yourself, ok lang masaktan, magalit tyka mapagod, hindi ka masamang anak dahil don, pero you dont have to accept every hurtful word thrown at you just because it comes from someone close to you, sana unti unti mo matutunan kung paano protektahan yung sarili mo, hindi porket galing sa taong malalapit sayo, ibig sabihin tama na agad yung sinasabi nila tungkol sayo, hindi ko sinasabing bigla ka na lang dapat mawalan ng pake, I know it doesnt work that way and I know there will still be days na masasaktan ka pa rin talaga, at ok lang yon, hindi naman mawawala agad yung sakit na yan e, pero sana dumating yung time na kahit marinig mo man ulit yung mga masasakit na sinasabi nila sayo, hindi na siya maging ganon kasakit katulad ng nararamdaman mo ngayon tyka hindi na rin sana guluhin yung isip mo buong araw o buong linggo, pero habang di ka pa dumadating don, sana tulungan mo rin yung sarili mo na makarating don, nasayo naman yung desisyon kung hahayaan mo lang masira yung peace of mind mo sa mga bagay na hindi mo naman kontrolado e o pipiliin mo unti unti bumangon para sa sarili mo, panigurado sasabihin mo sakin na hindi madaling gawin yon kasi mas madaling sabihin na mawalan ng pake diba kesa gawin talaga, pero naniniwala pa rin ako na kaya mo yon re, hindi mo naman kailangang pilitin yung sarili mong hindi masaktan e, ang gusto ko lang sana huwag mong hayaan yung mga sinasabi sayo yung maging dahilan para questionin mo palagi yung existence mo, be kind to yourself re, youve already made it through difficult things, tyka siguro hindi mo lang napapansin kung gaano ka na kalayo from who you used to be, take your time and rest when you need to, some of the best things take time to come together naman, kaya kapag nawawalan ka ng momentum sa buhay, bumangon ka lang ulit, parang ml lang yan, ok lang matalo basta huwag mo lang ibato cp mo at mag quit sa laro haha unli bawi naman yan, sana hindi mo rin kinakalimutan na youre someone worth knowing, worth keeping, and someone who deserves good things, life is too short to spend all your energy on things you cant control, choose your peace whenever you can, huwag kang tanga at bulag, Im still proud of you kasi kahit sobrang bigat, hindi ka pa rin sumusuko kahit kadalasan mong sinasabi na ayaw mo na, I hope this year gives you more reasons to smile, tyka madami pang beses na mararamdaman mong proud ka sa sarili mo, happy birthday shang, sana dumami pa birthdays mo kasi madami ka pang bote na itataob haha, keep your head up re, Im always rooting for you.',
       SNAP_DISTANCE: 50,
       MOBILE_SNAP_DISTANCE: 70
     };
@@ -1680,7 +1657,6 @@
       setupScrollListener();
     });
 
-    // SECTION NAVIGATION
     function showSection(sectionId) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
       document.querySelectorAll('.nav-button').forEach(b => b.classList.remove('active'));
@@ -1695,7 +1671,6 @@
       }
     }
 
-    // NIGHT SKY FUNCTIONS
     function debounce(fn, ms) {
       let t;
       return (...a) => {
@@ -1704,7 +1679,6 @@
       };
     }
 
-    // Small relaxation system to push very-close stars apart
     function separateCloseStars(positions, minSeparation, width, height, margin) {
       const n = positions.length;
       if (n <= 1) return;
@@ -1722,16 +1696,13 @@
             const minD = minSeparation;
             if (dist < minD) {
               moved = true;
-              // push them apart half-half
               const overlap = (minD - dist) * (stiffness);
               const ux = dx / dist;
               const uy = dy / dist;
-              // move a slightly opposite, b slightly along
               a.x -= ux * overlap * 0.5;
               a.y -= uy * overlap * 0.5;
               b.x += ux * overlap * 0.5;
               b.y += uy * overlap * 0.5;
-              // clamp to margins
               a.x = Math.max(margin, Math.min(width - margin, a.x));
               a.y = Math.max(margin, Math.min(height - margin, a.y));
               b.x = Math.max(margin, Math.min(width - margin, b.x));
@@ -1766,7 +1737,6 @@
       canvas.style.pointerEvents = 'none';
       container.appendChild(canvas);
 
-      // save canvas reference in state for redraws
       state.stars.canvas = canvas;
 
       const rect = container.getBoundingClientRect();
@@ -1783,7 +1753,6 @@
       const minDist = state.isMobile ? STAR_CONFIG.minDistanceMobile : STAR_CONFIG.minDistanceDesktop;
       const positions = generateStarPositions(count, minDist, width, height, STAR_CONFIG.margin);
 
-      // run a post-pass separation algorithm to avoid any very-close pairs
       separateCloseStars(positions, Math.max(minDist * 0.9, 40), width, height, STAR_CONFIG.margin);
 
       state.stars.starPositions = positions;
@@ -1791,7 +1760,6 @@
       const edges = buildStarEdges(positions, { neighbors: STAR_CONFIG.neighbors, maxDistance: Math.max(220, width * 0.45) });
       state.stars.starEdges = edges;
 
-      // check prefers-reduced-motion
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       positions.forEach((p, i) => {
@@ -1809,20 +1777,17 @@
           star.textContent = (msg && msg.emoji) ? msg.emoji : ['✨', '⭐', '🌠'][Math.floor(Math.random() * 3)];
         }
 
-        // position relative to container (use container coords)
-        // positions are already container-relative (x,y inside [margin, width-margin])
         star.style.left = (p.x) + 'px';
         star.style.top = (p.y) + 'px';
         star.style.transform = 'translate(-50%,-50%)';
         star.dataset.index = i;
         star.addEventListener('click', (e) => { e.stopPropagation(); onStarClick(i); });
 
-        // randomized subtle twinkle per star (respect reduced motion)
         if (!prefersReducedMotion) {
           const dur = 2.2 + Math.random() * 3.5; // 2.2s to ~5.7s
           const delay = Math.random() * 3.5; // 0-3.5s
           star.style.setProperty('--twinkle-duration', dur + 's');
-          star.style.setProperty('--twinkle-delay', (delay * -1) + 's'); // negative delay for phase offset
+          star.style.setProperty('--twinkle-delay', (delay * -1) + 's');
           star.style.animationDuration = dur + 's';
           star.style.animationDelay = (delay * -1) + 's';
         } else {
@@ -1830,7 +1795,6 @@
           star.style.animationDelay = '0s';
         }
 
-        // special stronger twinkle for the brightest star
         if (isBright) {
           star.style.setProperty('--twinkle-duration', '4.8s');
           star.style.setProperty('--twinkle-delay', '-1s');
@@ -1844,19 +1808,16 @@
 
       drawConstellationLines(canvas, positions, edges);
 
-      // start shooting star rain every 10s (skip when user prefers reduced motion)
       if (!prefersReducedMotion) {
         startShootingStarRain(container);
       }
 
-      // redraw on resize (debounced) - re-init
       const handleResize = debounce(() => {
         state.stars.starInitialized = false;
         initStars();
         state.stars.starInitialized = true;
       }, 250);
 
-      // remove previous listener if any to avoid duplicates
       if (!initStars._resizeAttached) {
         window.addEventListener('resize', handleResize);
         initStars._resizeAttached = true;
@@ -1881,14 +1842,13 @@
           }
           if (ok) { positions.push({ x, y }); placed = true; break; }
         }
-        if (!placed) {
-          // fallback: accept but try to minimize crowding
+        if (!placed) 
+        {
           const x = margin + Math.random() * Math.max(0, width - margin * 2);
           const y = margin + Math.random() * Math.max(0, height - margin * 2);
           positions.push({ x, y });
         }
       }
-      // keep brightest star in a pleasing spot but ensure it doesn't overlap
       const brightIdx = positions.length - 1;
       positions[brightIdx] = { x: width * 0.55, y: height * 0.35 };
       return positions;
@@ -1985,7 +1945,6 @@
         }
       } catch (e) { }
 
-      // redraw constellation to reflect discovered progress
       const canvas = state.stars.canvas;
       if (canvas) drawConstellationLines(canvas, state.stars.starPositions, state.stars.starEdges);
     }
@@ -1995,7 +1954,6 @@
       document.getElementById('starMessageModal').classList.remove('active');
     }
 
-    // Shooting star functions - multiple per burst every 10s
     function launchShootingStar(container) {
       if (!container) return;
       const rect = container.getBoundingClientRect();
@@ -2005,21 +1963,18 @@
       el.className = 'shooting-star';
       container.appendChild(el);
 
-      // random start point near top band, compute coords relative to container
       const startRatioX = Math.random() < 0.5 ? 0.05 : 0.95;
-      const startX = rect.width * startRatioX; // container-relative
+      const startX = rect.width * startRatioX; 
       const startY = rect.height * (0.08 + Math.random() * 0.25);
       const angleDeg = (Math.random() < 0.5) ? (20 + Math.random() * 20) : (-20 - Math.random() * 20);
       const length = 120 + Math.random() * 160;
       const duration = 700 + Math.random() * 1000; // ~0.7s - 1.7s
 
-      // position element relative to container
       el.style.left = (startX) + 'px';
       el.style.top = (startY) + 'px';
       el.style.transform = `rotate(${angleDeg}deg)`;
       el.style.opacity = '1';
 
-      // compute translation along rotated axis
       const rad = angleDeg * Math.PI / 180;
       // direction depends on start side
       const dx = Math.cos(rad) * ( startRatioX < 0.5 ? length : -length );
@@ -2032,32 +1987,26 @@
       const anim = el.animate(keyframes, { duration: duration, easing: 'cubic-bezier(.2,.8,.2,1)' });
       anim.onfinish = () => el.remove();
 
-      // fallback removal
       setTimeout(() => { try { el.remove(); } catch(e){} }, duration + 100);
     }
 
     function startShootingStarRain(container, perBurst = 6) {
-      // Ensure only one interval
       if (state.stars.shootingIntervalId) {
         clearInterval(state.stars.shootingIntervalId);
         state.stars.shootingIntervalId = null;
       }
-      // run immediately once
       launchMultipleShootingStars(container, perBurst);
-      // then schedule every 10s
       state.stars.shootingIntervalId = setInterval(() => {
         launchMultipleShootingStars(container, perBurst);
-      }, 10000); // every 10 seconds
+      }, 10000); 
     }
 
     function launchMultipleShootingStars(container, perBurst) {
       for (let i = 0; i < perBurst; i++) {
-        // small stagger for natural spread
         setTimeout(() => launchShootingStar(container), i * 140 + Math.random() * 180);
       }
     }
 
-    // PUZZLE
     function initPuzzle() {
       const canvas = document.getElementById('puzzleCanvas');
       const container = document.getElementById('puzzlePiecesContainer');
@@ -2223,7 +2172,6 @@
       initPuzzle();
     }
 
-    // AUDIO
     function preloadAudio() {
       state.audioPlayer.src = CONFIG.SONG_URL;
     }
@@ -2245,7 +2193,6 @@
       }
     }
 
-    // PASSWORD
     function handlePasswordKeypress(event) {
       if (event.key === 'Enter') checkPassword();
     }
@@ -2297,13 +2244,13 @@
     // PHOTOS
     const PHOTOS = [
       {src: 'https://raw.githubusercontent.com/reredz/shang/main/download.jfif'},
-      {src: 'https://raw.githubusercontent.com/redzkii/cha/main/download (2).jfif'},
-      {src: 'https://raw.githubusercontent.com/redzkii/cha/main/download (3).jfif'},
-      {src: 'https://raw.githubusercontent.com/redzkii/cha/main/download (4).jfif'},
-      {src: 'https://raw.githubusercontent.com/redzkii/cha/main/download (5).jfif'},
-      {src: 'https://raw.githubusercontent.com/redzkii/cha/main/download (6).jfif'},
-      {src: 'https://raw.githubusercontent.com/redzkii/cha/main/download (7).jfif'},
-      {src: 'https://raw.githubusercontent.com/redzkii/cha/main/eb50409b-6048-4aeb-8265-398eea7483c1.jfif', caption: 'Simula bata mahilig na talaga sa bali leeg e'}
+      {src: 'https://raw.githubusercontent.com/reredz/shang/main/download (2).jfif'},
+      {src: 'https://raw.githubusercontent.com/reredz/shang/main/download (3).jfif'},
+      {src: 'https://raw.githubusercontent.com/reredz/shang/main/download (4).jfif'},
+      {src: 'https://raw.githubusercontent.com/reredz/shang/main/download (5).jfif'},
+      {src: 'https://raw.githubusercontent.com/reredz/shang/main/download (6).jfif'},
+      {src: 'https://raw.githubusercontent.com/reredz/shang/main/download (8).jfif'},
+      {src: 'https://raw.githubusercontent.com/reredz/shang/main/download (9).jfif'}
     ];
 
     function initPhotoGallery() {
@@ -2328,7 +2275,6 @@
       document.getElementById('photoModal').classList.remove('active');
     }
 
-    // HEART
     function showMessage(event) {
       const messageDiv = document.getElementById('message');
       messageDiv.style.display = 'block';
