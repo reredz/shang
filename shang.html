@@ -733,15 +733,15 @@
       transform: scale(1.1);
     }
 
-    /* Flower Gallery Styles */
-    .flower-gallery {
+    /* Nature Gallery Styles */
+    .nature-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
 
-    .flower-card {
+    .nature-card {
       background: linear-gradient(135deg, rgba(155, 107, 184, 0.05) 0%, rgba(155, 107, 184, 0.05) 100%);
       border-radius: 15px;
       padding: 20px;
@@ -751,32 +751,32 @@
       border: 2px solid rgba(155, 107, 184, 0.1);
     }
 
-    .flower-card:hover {
+    .nature-card:hover {
       transform: translateY(-10px);
       box-shadow: 0 15px 30px rgba(155, 107, 184, 0.2);
       border-color: #9b6bb8;
     }
 
-    .flower-emoji {
+    .nature-emoji {
       font-size: 60px;
       margin-bottom: 10px;
       display: inline-block;
       transition: all 0.3s ease;
     }
 
-    .flower-card:hover .flower-emoji {
+    .nature-card:hover .nature-emoji {
       font-size: 80px;
       animation: float 0.6s ease-in-out;
     }
 
-    .flower-name {
+    .nature-name {
       font-size: 16px;
       color: #6b4a8f;
       font-weight: 600;
       margin-bottom: 8px;
     }
 
-    .flower-meaning {
+    .nature-meaning {
       font-size: 13px;
       color: #666;
       line-height: 1.5;
@@ -1327,7 +1327,7 @@
 <body>
   <button class="music-player" id="musicPlayer" onclick="toggleMusic()" title="Toggle background music">
     🎵
-    <div class="music-player-tooltip">This Town - Niall Horan</div>
+    <div class="music-player-tooltip">Flower - Samantha Elbert</div>
   </button>
   <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()" title="Scroll to top">↑</button>
 
@@ -1361,14 +1361,14 @@
     <button class="nav-button" onclick="showSection('photos')">📸 Photos</button>
     <button class="nav-button" onclick="showSection('puzzle')">🧩 Puzzle</button>
     <button class="nav-button" onclick="showSection('sky')">🌙 Night Sky</button>
-    <button class="nav-button" onclick="showSection('flowers')">💮 Flowers</button>
+    <button class="nav-button" onclick="showSection('nature')">🌿 Nature</button>
     <button class="nav-button" onclick="showSection('songs')">🎵 Songs</button>
   </div>
 
   <!-- Home Section -->
   <div id="home" class="section active">
     <div class="container">
-      <h1>To the girl who forgets how amazing she is</h1>
+      <h1>To The Girl Who Forgets How Amazing She Is</h1>
       <p class="subtitle">Whenever you doubt yourself, tap the heart and remember these things.</p>
       
       <div class="heart-container">
@@ -1382,19 +1382,19 @@
         </div>
         <div class="reason">
           <span class="reason-number">2</span>
-          You are so much more than your fears, your mistakes, or the thoughts that try to bring you down. 
+          The way you continue moving forward, even after difficult days, shows a strength that's easy to overlook but impossible not to admire.
         </div>
         <div class="reason">
           <span class="reason-number">3</span>
-          There are so many beautiful things about you that you don't even notice. I hope one day you do.
+          The person you see in the mirror is often your own harshest critic. Some of the best things about you are the things you don't even realize.
         </div>
         <div class="reason">
           <span class="reason-number">4</span>
-          Even when your mind tells you otherwise, remember that you are appreciated and valued by the people who care about you.
+          The voice that tells you you're a burden or that nobody cares isn't telling you the truth. There are people who you don't notice that appreciate having you in their lives.
         </div>
         <div class="reason">
           <span class="reason-number">5</span>
-          Please don't forget how far you've come. Even the days you thought you couldn't handle are days you were strong enough to overcome.
+          Your worth has never been measured by your mistakes, your achievements, or the opinions of other people. It has always existed, even on the days you couldn't see it yourself.
         </div>
       </div>
 
@@ -1402,8 +1402,8 @@
       <div id="secretMessage" class="secret-message">
         <div class="secret-card">
           If you ever forget how special you are<br><br>
-          Come back and read this again<br><br>
-          I'll always believe in you, even on the days when it's hard for you to believe in yourself. 
+         Come back and read this again<br><br>
+          I'll always believe in you, even on the days when it's hard for you to believe in yourself.
           <br><br>I'll always be proud of you, shang.
         </div>
       </div>
@@ -1437,10 +1437,10 @@
   <div id="puzzle" class="section">
     <div class="container">
       <h2>🧩 Puzzle 🧩</h2>
-      <p class="subtitle">You're like a puzzle and I love every piece of you.</p>
+      <p class="subtitle">Not every piece makes sense now, but someday it all will.</p>
       
       <div class="puzzle-instructions">
-        💝 Drag mo puzzle sa white box sa left side, kapag nabuo mo tingnan mo baba.
+        💝 Drag mo puzzle sa white box sa left side, kapag nabuo mo tingnan mo lalabas sa baba. 
       </div>
 
       <div class="puzzle-wrapper">
@@ -1466,8 +1466,8 @@
   <!-- Night Sky Section -->
   <div id="sky" class="section">
     <div class="night-sky-container">
-      <h2>🌙 A sky full of possibilities 🌙</h2>
-      <p class="night-sky-subtitle">Every fragments holds a little reminder of the beautiful things that may still be waiting for you.</p>
+      <h2>🌙 A Sky Full of Things I Never Want You to Forget 🌙</h2>
+      <p class="night-sky-subtitle">Every fragments holds something I wanted to tell you.</p>
 
       <div class="stars-container" id="starsContainer">
         <!-- canvas and stars are injected here -->
@@ -1497,54 +1497,49 @@
   <!-- Nature Section -->
   <div id="nature" class="section">
     <div class="container">
-      <h2>💐 When Nature Speaks 💐</h2>
+      <h2>🍃 When Nature Speaks 🍃</h2>
       <p class="subtitle">If no one says it today, let nature say it instead.</p>
       
       <div class="nature-gallery">
         <div class="nature-card">
           <div class="nature-emoji">☀️</div>
           <div class="nature-name">Sun</div>
-          <div class="nature-meaning">Every sunrise is a reminder that new beginnings are always possible.</div>
+          <div class="nature-meaning">Give yourself another chance, just like every sunrise does.</div>
         </div>
         <div class="nature-card">
           <div class="nature-emoji">🌧️</div>
           <div class="nature-name">Rain</div>
           <div class="nature-meaning">Crying doesn't make you weak, even the rain carries the heaviest clouds.</div>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">🌺</div>
-          <div class="flower-name">Hibiscus</div>
-          <div class="flower-meaning">Je t'aime</div>
+        <div class="nature-card">
+          <div class="nature-emoji">🌷</div>
+          <div class="nature-name">Flower</div>
+          <div class="nature-meaning">Stop comparing yourself, every flower blooms at a different time.</div>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">🌻</div>
-          <div class="flower-name">Sunflower</div>
-          <div class="flower-meaning">Te iubesc</div>
+        <div class="nature-card">
+          <div class="nature-emoji">🌙</div>
+          <div class="nature-name">Moon</div>
+          <div class="nature-meaning">You don't have to be full every night to be beautiful.</div>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">🌷</div>
-          <div class="flower-name">Tulip</div>
-          <div class="flower-meaning">Eu te amo</div>
+        <div class="nature-card">
+          <div class="nature-emoji">🌊</div>
+          <div class="nature-name">Ocean</div>
+          <div class="nature-meaning">Not every wave is meant to drown you, some are only teaching you to keep floating.</div>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">🪻</div>
-          <div class="flower-name">Hyacinth</div>
-          <div class="flower-meaning">Ich liebe dich</div>
+        <div class="nature-card">
+          <div class="nature-emoji">⛰️</div>
+          <div class="nature-name">Mountain</div>
+          <div class="nature-meaning">Every mountain reminds you that hard things can be overcome.</div>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">🌸</div>
-          <div class="flower-name">Cherry Blossom</div>
-          <div class="flower-meaning">Seni seviyorum</div>
+        <div class="nature-card">
+          <div class="nature-emoji">🌳</div>
+          <div class="nature-name">Trees</div>
+          <div class="nature-meaning">Losing a few leaves doesn't mean you've stopped growing.</div>
         </div>
-        <div class="flower-card">
-          <div class="flower-emoji">🌼</div>
-          <div class="flower-name">Daisy</div>
-          <div class="flower-meaning">Ik hou van jou</div>
-        </div>
-        <div class="flower-card">
-          <div class="flower-emoji">🪷</div>
-          <div class="flower-name">Lotus Flower</div>
-          <div class="flower-meaning">Jeg elsker deg</div>
+        <div class="nature-card">
+          <div class="nature-emoji">🌈</div>
+          <div class="nature-name">Rainbow</div>
+          <div class="nature-meaning">Never lose your colors because someone else failed to see them.</div>
         </div>
       </div>
     </div>
@@ -1559,50 +1554,50 @@
       <div class="songs-container">
         <div class="song-card">
           <div style="font-size: 30px; margin-bottom: 10px;">🎶</div>
-          <div class="song-title">Paninindigan Kita</div>
-          <div class="song-artist">Ben & Ben</div>
-          <div class="song-reason">Because I won't give up on you or what we have.</div>
-          <div class="song-note">💭 "Paninindigan kita"</div>
+          <div class="song-title">Fix You</div>
+          <div class="song-artist">Coldplay</div>
+          <div class="song-reason">No matter how lost you feel, there is still a way back to yourself.</div>
+          <div class="song-note">💭 "Lights will guide you home"</div>
         </div>
         <div class="song-card">
           <div style="font-size: 30px; margin-bottom: 10px;">🎶</div>
-          <div class="song-title">Aphrodite</div>
-          <div class="song-artist">The Ridleys</div>
-          <div class="song-reason">Because you feel so beautiful that I get lost just thinking about you.</div>
-          <div class="song-note">💭 "I swear to Zeus, you're Aphrodite in disguise"</div>
+          <div class="song-title">Courage</div>
+          <div class="song-artist">Ben and Ben </div>
+          <div class="song-reason">Having the courage to continue is already a victory.</div>
+          <div class="song-note">💭 "In the end, keep carrying on with courage"</div>
         </div>
         <div class="song-card">
           <div style="font-size: 30px; margin-bottom: 10px;">🎶</div>
-          <div class="song-title">An Art Gallery Could Never Be As Unique As You</div>
-          <div class="song-artist">MRLD</div>
-          <div class="song-reason">Because you feel like a masterpiece I'll always admire.</div>
-          <div class="song-note">💭 "And you're my favorite sight to see"</div>
+          <div class="song-title">Not Your Fault</div>
+          <div class="song-artist">Yaeow</div>
+          <div class="song-reason">You should never feel ashamed of the things you had to overcome.</div>
+          <div class="song-note">💭 "Hey you, you should know that I'm proud"</div>
         </div>
         <div class="song-card">
           <div style="font-size: 30px; margin-bottom: 10px;">🎶</div>
-          <div class="song-title">Moonlight in Heaven</div>
-          <div class="song-artist">Bullet & Frames</div>
-          <div class="song-reason">Because I still can't believe someone like you chose to stay with me.</div>
-          <div class="song-note">💭 "I fell in love with the divine, and I can't believe that she's all mine"</div>
+          <div class="song-title">Pag-Asa</div>
+          <div class="song-artist">Sean Sapanila</div>
+          <div class="song-reason">Even in the hardest seasons, something beautiful can still grow from within you.</div>
+          <div class="song-note">💭 "Tanggapin mo ang iyong sarili, kahit na ga'no pa kalalim ang lubak"</div>
         </div>
         <div class="song-card">
           <div style="font-size: 30px; margin-bottom: 10px;">🎶</div>
-          <div class="song-title">Star Song</div>
-          <div class="song-artist">Rob Deniel</div>
-          <div class="song-reason">Because in a world full of distractions, my heart still chooses to focus only on you.</div>
-          <div class="song-note">💭 "At kahit kailan, ikaw lang ang gustong pagmasdan"</div>
+          <div class="song-title">Sindi</div>
+          <div class="song-artist">Arthur Miguek</div>
+          <div class="song-reason">You don't have to blame yourself for the things you never deserved to carry.</div>
+          <div class="song-note">💭 "Dahil minsan ayoko na rin mabuhay, kung paulit‑ulit kang mamamatay"</div>
         </div>
         <div class="song-card">
           <div style="font-size: 30px; margin-bottom: 10px;">🎶</div>
-          <div class="song-title">Balisong</div>
-          <div class="song-artist">Rico Blanco</div>
-          <div class="song-reason">Because you became everything I never knew I needed.</div>
-          <div class="song-note">💭 "You're everything I wanted and more"</div>
+          <div class="song-title">Para</div>
+          <div class="song-artist">Renard Bugash</div>
+          <div class="song-reason">Asking for help doesn't make you weak.</div>
+          <div class="song-note">💭 "Di na kailangan pang itago, ang mga luha sa iyong mata"</div>
         </div>
       </div>
 
       <div class="music-info">
-        🎵 Now playing: "This Town" by Niall Horan - Click the music button in the top right to play!
+        🎵 Now playing: "Flowers" by Samantha Ebert - Click the music button in the top right to play!
       </div>
     </div>
   </div>
@@ -1610,35 +1605,35 @@
   <script>
     const CONFIG = {
       PASSWORD: 'santomama',
-      SONG_URL: 'https://raw.githubusercontent.com/redzkii/cha/main/Niall Horan - This Town (Official Lyric Video) (2).mp3',
-      PUZZLE_IMAGE: 'https://raw.githubusercontent.com/redzkii/shang/main/IMG_20241221_143147.jpg',
+      SONG_URL: 'https://raw.githubusercontent.com/reredz/cha/main/Samantha Ebert ft. Seph Schlueter - Flowers (Official Lyric Video).mp3',
+      PUZZLE_IMAGE: 'https://raw.githubusercontent.com/reredz/shang/main/IMG_20241221_143147.jpg',
       PUZZLE_ROWS: 3,
       PUZZLE_COLS: 4,
       PUZZLE_SIZE: 400,
-      SECRET_MESSAGE: 'Remember this re that sometimes life feels like a puzzle where some pieces dont seem to fit and some days feel harder than others, there are times na mahirap intindihin ng lahat, kahit gawin mo na lahat ng best mo riyan pero minsan parang kulang pa rin talaga, every piece of you has a reason, yung mga bagay na pinagdaanan mo, yung mga araw na akala mo hindi mo kakayanin tapos nalagpasan mo tyka yung mga maliliit na bagay pa na ginagawa mo para sa ibang tao, lahat ng yon naging parte ng kung sino ka ngayon, I hope you never forget re that youre someone worth knowing, someone worth keeping, and someone who deserves good things, huwag ka maging tanga tyka hindi mo kailangang madaliin lahat kapag may prob ka, take your time lang, rest when you need to and dont be too hard on yourself kapag hindi ka okay, some of the best things take time to come together kaya you dont have to rush becoming the person you want to be, sobra dami mo nang nalagpasan e, saksi riyan re kahit minsan hindi mo napapansin kung gaano ka na kalayo sa dati, I hope this year gives you more reasons to smile tyka madami pang beses na mararamdaman mong proud ka sa sarili mo, dont forget to be kind to yourself, okay? kahit may araw na hindi mo nakikita yung worth mo kasi bulag ka tanga, proud pa rin sayo re for making it this far, hindi lang dahil sa mga bagay na naachieve mo na pero dahil hindi ka nag give up kahit sobra bigat na, happy birthday shang, madami pa sana bd ah.',
+      SECRET_MESSAGE: 'Remember re that sometimes life feels like a puzzle, may mga pieces na hindi agad nagtutugma sa una kaya mahirap talagang intindihin, kumbaga minsan kahit ibigay mo na yung best mo, nagiging magulo pa rin talaga, pero hindi ibig sabihin nun na wala nang sense lahat yon, every piece has a reason, alam kong hindi naging madali yung mga pinagdadaanan mo, lalo na yung mga bagay na nanggagaling sa mga taong dapat sana unang nakakaintindi at nagbibigay ng comfort sayo, pero kaya ko sinasabi na sana unti unti mong matutunang mawalan ng pake sa mga masasakit na salitang binabato sayo, hindi dahil madali lang gawin yon, kundi dahil alam ko kung gaano kabigat yung epekto non sayo. I know how much those words stay in your mind and I dont want you to keep letting them destroy the way you see yourself, okay lang masaktan, magalit tyka mapagod, hindi ka masamang anak dahil don, pero you dont have to accept every hurtful word thrown at you just because it comes from someone close to you, sana unti unti mo matutunan kung paano protektahan yung sarili mo, kasi hindi porket galing sa taong malapit sayo, ibig sabihin tama na agad yung sinasabi nila tungkol sayo, hindi ko sinasabing bigla ka na lang dapat mawalan ng pake, I know it doesnt work that way and I know there will still be days na masasaktan ka talaga at ok lang yon, hindi naman mawawala agad yung sakit, pero sana dumating yung time na marinig mo man yung mga masasakit na sinasabi nila, hindi na siya kasing sakit ng nararamdaman mo ngayon tyka hindi na rin mananatili sa isip mo buong araw o buong linggo, habang hinihintay mo yung araw na yon, sana tulungan mo rin yung sarili mo na makarating don, nasayo yung desisyon kung hahayaan mo lang masira yung peace of mind mo ng mga bagay na hindi mo naman kontrolado o piliin mo unti unti bumangon para sa sarili mo, sasabihin mo hindi madaling gawin kasi mas madaling sabihin na mawalan ng pake diba kesa gawin talaga, pero naniniwala ako na kaya mo re, hindi mo naman kailangang pilitin yung sarili mong hindi masaktan, ang gusto ko lang sana huwag mong hayaan yung mga sinasabi sayo yung maging dahilan para questionin mo palagi yung existence mo, be kind to yourself re, youve already survived so much tyka siguro hindi mo lang napapansin kung gaano ka na kalayo from who you used to be, take your time and rest when you need to, some of the best things take time to come together, kaya kapag nawalan ka ng momentum sa buhay, bumangon ka lang ulit, parang ml lang yan, ok lang matalo basta huwag mo lang ibato cp mo at mag quit sa laro haha, sana hindi mo rin makalimutan na youre someone worth knowing, worth keeping, and someone who deserves good things, life is too short to spend all your energy on things you cant control, so choose your peace whenever you can, Im still proud of you kasi kahit sobrang bigat na, hindi ka pa rin sumusuko kahit sinasabi mong ayaw mo na, I hope this year gives you more reasons to smile, tyka madami pang beses na mararamdaman mong proud ka sa sarili mo, happy birthday shang, sana dumami pa birthdays mo kasi madami pang bote na itataob haha, keep your head up, Im always rooting for you re.',
       SNAP_DISTANCE: 50,
       MOBILE_SNAP_DISTANCE: 70
     };
 
     const STAR_MESSAGES = [
       {type:'Dreams', emoji:'⭐', message:"One day, you'll get to see the places you've always wanted to visit."},
-      {type:'Reminders', emoji:'💜', message:"Remember that your feelings and thoughts are always important."},
+      {type:'Reminders', emoji:'💜', message:"Remember that your feelings and thoughts are always important, even if you don't always know how to explain them."},
       {type:'Possibilities', emoji:'🌠', message:"There are still people you haven't met who may become an important part of your life."},
       {type:'Hopes', emoji:'🤫', message:"I hope you always find reasons to smile, even on the days when things feel heavy."},
       {type:'Dreams', emoji:'⭐', message:"One day, you'll see yourself becoming the person you always wanted to be."},
       {type:'Reminders', emoji:'💜', message:"Remember that you deserve to celebrate yourself, not only when you succeed but also when you try."},
-      {type:'Possibilities', emoji:'🌠', message:"There are still things waiting to surprise you in the best ways."},
-      {type:'Hopes', emoji:'🤫', message:"I hope you learn that loving someone should never mean losing yourself."},
-      {type:'Dreams', emoji:'⭐', message:"One day, you'll experience the happiness you've always wanted to feel."},
+      {type:'Possibilities', emoji:'🌠', message:"There will always be people who don't understand you, but that doesn't make you any less valuable."},
+      {type:'Hopes', emoji:'🤫', message:"I hope you learn that loving someone should never mean losing yourself. Never settle for anything that constantly makes you question your worth."},
+      {type:'Dreams', emoji:'⭐', message:"Some dreams take longer than expected and that's okay. Moving slowly is still moving forward."},
       {type:'Reminders', emoji:'💜', message:"Remember that the parts of yourself you struggle to accept are still parts that deserve care."},
       {type:'Possibilities', emoji:'🌠', message:"There are moments when you'll look back and understand why things happened the way they did."},
-      {type:'Hopes', emoji:'🤫', message:"I hope you always feel loved and appreciated by the people who matter to you."},
+      {type:'Hopes', emoji:'🤫', message:"Don't be afraid to start over. Sometimes the best chapters begin after the ones that hurt the most."},
       {type:'Dreams', emoji:'⭐', message:"One day, you'll wake up living a life that feels like the one you've always imagined."},
-      {type:'Reminders', emoji:'💜', message:"Remember that there are people who appreciate you even when you don't notice it."},
+      {type:'Reminders', emoji:'💜', message:"Remember that it's okay to outgrow people, places, and versions of yourself that no longer bring you peace."},
       {type:'Possibilities', emoji:'🌠', message:"There are still experiences that may change the way you see the world."},
       {type:'Hopes', emoji:'🤫', message:"I hope you live a life where you never have to question if you are enough."},
       {type:'Dreams', emoji:'⭐', message:"One day, you'll celebrate the achievements you once thought were far away."},
-      {type:'Reminders', emoji:'💜', message:"Remember that the things you think are ordinary about yourself may be the things others admire the most."},
+      {type:'Reminders', emoji:'💜', message:"Remember that the things you think are ordinary about yourself maybe the things others admire the most."},
       {type:'Possibilities', emoji:'🌠', message:"There will be times when college won't go the way you expect, but keep trying because every step still matters."},
       {type:'Believe', emoji:'🌟', message:"You are stronger than the hard days you face. You still have dreams to reach, memories to make, and many reasons to keep moving forward."}
     ];
@@ -1690,7 +1685,7 @@
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
       document.querySelectorAll('.nav-button').forEach(b => b.classList.remove('active'));
       document.getElementById(sectionId).classList.add('active');
-      const sections = ['home', 'photos', 'puzzle', 'sky', 'flowers', 'songs'];
+      const sections = ['home', 'photos', 'puzzle', 'sky', 'nature', 'songs'];
       const index = sections.indexOf(sectionId);
       if (index >= 0) document.querySelectorAll('.nav-button')[index].classList.add('active');
       window.scrollTo(0, 0);
@@ -2261,8 +2256,8 @@
         document.getElementById('passwordScreen').classList.add('hidden');
         input.value = '';
       } else {
-        const emoji = ['😢', '🙈', '😕', '😤', '🤔', '🥺'];
-        const msg = ['Ano na', 'Nice try', 'Kaya pa ba?', 'Tanga mo naman'];
+        const emoji = ['🤣', '😛', '🤬', '😤', '🤔'];
+        const msg = ['Ano na', 'Tanga ampota', 'Kaya pa ba?', 'Bobo HAHA'];
         document.getElementById('wrongPasswordMessage').innerHTML = `
           <div class="wrong-password-emoji">${emoji[Math.floor(Math.random() * emoji.length)]}</div>
           <div class="wrong-password-message">${msg[Math.floor(Math.random() * msg.length)]}</div>
@@ -2273,7 +2268,7 @@
     }
 
     function showPasswordHint() {
-      const hints = ['Clue 1: Starts with s', 'Clue 2: Nanickname ko na sayo to dati', 'Clue 3: Try mo na santomama'];
+      const hints = ['Clue 1: Starts with s', 'Clue 2: Nanickname ko na sayo dati', 'Clue 3: lagay mo na santomama'];
       const hintDisplay = document.getElementById('hintDisplay');
       const hintButton = document.getElementById('hintButton');
       
@@ -2377,7 +2372,7 @@
     }
 
     function createConfetti(event) {
-      const confettiPieces = ['❤️', '😘', '😍', '💕', '💖', '😻', '💘', '❤️‍🔥', '🥰', '🙈', '😽', '🤍'];
+      const confettiPieces = ['🐮', '🐶', '🐷', '🐸', '🐻', '🐼', '🐯', '🐱', '🦊', '🐰', '🐻‍❄️', '🐹'];
       const rect = event.target.getBoundingClientRect();
       
       for (let i = 0; i < 10; i++) {
