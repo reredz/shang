@@ -1308,6 +1308,46 @@
         transition: none !important;
       }
     }
+  
+    .song-player-wrap {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .song-play-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 16px;
+      background: linear-gradient(135deg, #d94f70, #9e2f50);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 5px 12px rgba(158, 47, 80, 0.22);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .song-play-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(158, 47, 80, 0.3);
+    }
+
+    .song-play-btn.playing {
+      background: linear-gradient(135deg, #9e2f50, #7f2440);
+    }
+
+    .song-status {
+      font-size: 12px;
+      color: #9e2f50;
+      opacity: 0.8;
+    }
+
+    .song-audio {
+      display: none;
+    }
+
   </style>
 </head>
 <body>
@@ -1528,17 +1568,19 @@
       <h2>🎵 Songs That Remind Me of You 🎵</h2>
       <p class="subtitle">A few songs I chose because I thought you might like them.</p>
       
-         <div class="songs-container">
+      <div class="songs-container">
         <div class="song-card">
           <div style="font-size: 30px; margin-bottom: 10px;">🎶</div>
           <div class="song-title">Fix You</div>
           <div class="song-artist">Coldplay</div>
           <div class="song-reason">No matter how lost you feel, there is still a way back to yourself.</div>
           <div class="song-note">💭 "Lights will guide you home"</div>
-          <button onclick="playSong('fixyou')">▶ Play Song</button>
-
-<audio id="fixyou" controls loop>
-  <source src="@coldplay - Fix You (Lyrics).mp3" type="audio/mpeg">
+          <div class="song-player-wrap">
+            <button class="song-play-btn" type="button" onclick="toggleSong(this, 'fix-you')">▶ Play Song</button>
+            <span class="song-status">Tap to listen</span>
+          </div>
+          <audio class="song-audio" id="fix-you" loop preload="none"
+  src="@coldplay - Fix You (Lyrics).mp3">
 </audio>
         </div>
         <div class="song-card">
@@ -1547,10 +1589,12 @@
           <div class="song-artist">Ben and Ben </div>
           <div class="song-reason">Having the courage to continue is already a victory.</div>
           <div class="song-note">💭 "In the end, keep carrying on with courage"</div>
-<button onclick="playSong('courage')">▶ Play Song</button>
-
-<audio id="fixyou" controls loop>
-  <source src="Ben&Ben - Courage  Official Lyric Video.mp3" type="audio/mpeg">
+          <div class="song-player-wrap">
+            <button class="song-play-btn" type="button" onclick="toggleSong(this, 'courage')">▶ Play Song</button>
+            <span class="song-status">Tap to listen</span>
+          </div>
+          <audio class="song-audio" id="courage" loop preload="none"
+  src="Ben&Ben - Courage  Official Lyric Video.mp3">
 </audio>
         </div>
         <div class="song-card">
@@ -1559,10 +1603,12 @@
           <div class="song-artist">Yaeow</div>
           <div class="song-reason">You should never feel ashamed of the things you had to overcome.</div>
           <div class="song-note">💭 "Hey you, you should know that I'm proud"</div>
-          <button onclick="playSong('notyourfault')">▶ Play Song</button>
-
-<audio id="fixyou" controls loop>
-  <source src="yaeow - not your fault (hey you) (Official Lyric Video).mp3" type="audio/mpeg">
+          <div class="song-player-wrap">
+            <button class="song-play-btn" type="button" onclick="toggleSong(this, 'not-your-fault')">▶ Play Song</button>
+            <span class="song-status">Tap to listen</span>
+          </div>
+          <audio class="song-audio" id="not-your-fault" loop preload="none"
+  src="yaeow - not your fault (hey you) (Official Lyric Video).mp3">
 </audio>
         </div>
         <div class="song-card">
@@ -1571,10 +1617,12 @@
           <div class="song-artist">Sean Sapanila</div>
           <div class="song-reason">Even in the hardest seasons, something beautiful can still grow from within you.</div>
           <div class="song-note">💭 "Tanggapin mo ang iyong sarili, kahit na ga'no pa kalalim ang lubak"</div>
-              <button onclick="playSong('pag-asa')">▶ Play Song</button>
-
-<audio id="fixyou" controls loop>
-  <source src="PAG-ASA (Lyric Video)  Sean Sapanila ft. Gerry Calzado.mp3" type="audio/mpeg">
+          <div class="song-player-wrap">
+            <button class="song-play-btn" type="button" onclick="toggleSong(this, 'pag-asa')">▶ Play Song</button>
+            <span class="song-status">Tap to listen</span>
+          </div>
+          <audio class="song-audio" id="pag-asa" loop preload="none"
+  src="PAG-ASA (Lyric Video)  Sean Sapanila ft. Gerry Calzado.mp3">
 </audio>
         </div>
         <div class="song-card">
@@ -1583,10 +1631,12 @@
           <div class="song-artist">Arthur Miguek</div>
           <div class="song-reason">You don't have to blame yourself for the things you never deserved to carry.</div>
           <div class="song-note">💭 "Dahil minsan ayoko na rin mabuhay, kung paulit‑ulit kang mamamatay"</div>
-              <button onclick="playSong('sindi')">▶ Play Song</button>
-
-<audio id="fixyou" controls loop>
-  <source src="Arthur Miguel - Sindi (Official Lyric Visualizer).mp3" type="audio/mpeg">
+          <div class="song-player-wrap">
+            <button class="song-play-btn" type="button" onclick="toggleSong(this, 'sindi')">▶ Play Song</button>
+            <span class="song-status">Tap to listen</span>
+          </div>
+          <audio class="song-audio" id="sindi" loop preload="none"
+  src="Arthur Miguel - Sindi (Official Lyric Visualizer).mp3">
 </audio>
         </div>
         <div class="song-card">
@@ -1595,10 +1645,12 @@
           <div class="song-artist">Carl Beley</div>
           <div class="song-reason">Asking for help doesn't make you weak. You are allowed to need someone too.</div>
           <div class="song-note">💭 "Wala kang kasalanan, 'Di ka nag-iisa"</div>
-              <button onclick="playSong('pagbigyan')">▶ Play Song</button>
-
-<audio id="fixyou" controls loop>
-  <source src="Pagbigyan by Carl Beley (Official Lyric Video) (1).mp3" type="audio/mpeg">
+          <div class="song-player-wrap">
+            <button class="song-play-btn" type="button" onclick="toggleSong(this, 'para')">▶ Play Song</button>
+            <span class="song-status">Tap to listen</span>
+          </div>
+          <audio class="song-audio" id="pagbigyan" loop preload="none"
+  src="Pagbigyan by Carl Beley (Official Lyric Video) (1).mp3">
 </audio>
         </div>
       </div>
@@ -1617,7 +1669,7 @@
       PUZZLE_ROWS: 3,
       PUZZLE_COLS: 4,
       PUZZLE_SIZE: 400,
-      SECRET_MESSAGE: 'Remember re that sometimes life feels like a puzzle, may mga pieces na hindi agad nagtutugma sa una kaya mahirap talagang intindihin, kumbaga minsan kahit ibigay mo na yung best mo, nagiging magulo pa rin talaga, pero hindi ibig sabihin non na wala nang sense lahat yon, every piece has a reason, alam kong hindi naging madali yung mga pinagdadaanan mo, lalo na yung mga bagay pa na nanggagaling sa mga taong dapat sana unang nakakaintindi at nagbibigay ng comfort sayo, pero kaya ko sinabi na sana unti unti mong matutunang mawalan ng pake sa mga masasakit na salitang binabato sayo, hindi ko sinasabi na madali lang gawin yon, kundi dahil alam ko kung gaano kabigat yung epekto non sayo. I know how much those words stay in your mind and I dont want you to keep letting them destroy the way you see yourself, ok lang masaktan, magalit tyka mapagod, hindi ka masamang anak dahil don, pero you dont have to accept every hurtful word thrown at you just because it comes from someone close to you, sana unti unti mo matutunan kung paano protektahan yung sarili mo, hindi porket galing sa taong malalapit sayo, ibig sabihin tama na agad yung sinasabi nila tungkol sayo, hindi ko sinasabing bigla ka na lang dapat mawalan ng pake, I know it doesnt work that way and I know there will still be days na masasaktan ka pa rin talaga, at ok lang yon, hindi naman mawawala agad yung sakit na yan e, pero sana dumating yung time na kahit marinig mo man ulit yung mga masasakit na sinasabi nila sayo, hindi na siya maging ganon kasakit katulad ng nararamdaman mo ngayon tyka hindi na rin sana guluhin yung isip mo buong araw o buong linggo, pero habang di ka pa dumadating don, sana tulungan mo rin yung sarili mo na makarating don, nasayo naman yung desisyon kung hahayaan mo lang masira yung peace of mind mo sa mga bagay na hindi mo naman kontrolado e o pipiliin mo unti unti bumangon para sa sarili mo, panigurado sasabihin mo sakin na hindi madaling gawin yon kasi mas madaling sabihin na mawalan ng pake diba kesa gawin talaga, pero naniniwala pa rin ako na kaya mo yon re, hindi mo naman kailangang pilitin yung sarili mong hindi masaktan e, ang gusto ko lang sana huwag mong hayaan yung mga sinasabi sayo yung maging dahilan para questionin mo palagi yung existence mo, be kind to yourself re, youve already made it through difficult things, tyka siguro hindi mo lang napapansin kung gaano ka na kalayo from who you used to be, take your time and rest when you need to, some of the best things take time to come together naman, kaya kapag nawawalan ka ng momentum sa buhay, bumangon ka lang ulit, parang ml lang yan, ok lang matalo basta huwag mo lang ibato cp mo at mag quit sa laro haha unli bawi naman yan, sana hindi mo rin kinakalimutan na youre someone worth knowing, worth keeping, and someone who deserves good things, life is too short to spend all your energy on things you cant control, choose your peace whenever you can, huwag kang tanga at bulag, Im still proud of you kasi kahit sobrang bigat, hindi ka pa rin sumusuko kahit kadalasan mong sinasabi na ayaw mo na, I hope this year gives you more reasons to smile, tyka madami pang beses na mararamdaman mong proud ka sa sarili mo, happy birthday shang, sana dumami pa birthdays mo kasi madami ka pang bote na itataob haha, keep your head up re, Im always rooting for you.',
+      SECRET_MESSAGE: 'Remember re that sometimes life feels like a puzzle, may mga pieces na hindi agad nagtutugma sa una kaya mahirap talagang intindihin, kumbaga minsan kahit ibigay mo na yung best mo, nagiging magulo pa rin talaga, pero hindi ibig sabihin non na wala nang sense lahat yon, every piece has a reason, alam kong hindi naging madali yung mga pinagdadaanan mo, lalo na ron pa nanggagaling sa mga taong dapat unang nakakaintindi at nagbibigay ng comfort sayo, pero kaya ko lang naman sinabi na sana unti unti mong matutunan na mawalan ng pake sa mga masasakit na sinasabi sayo, hindi ko sinasabi na madali lang gawin yon, kundi dahil alam ko kung gaano kabigat yung nagiging epekto non sayo. I know how much those words stay in your mind and I dont want you to keep letting them destroy the way you see yourself, ok lang masaktan, magalit tyka mapagod, hindi ka naman masamang anak dahil don, pero you dont have to accept every hurtful word thrown at you just because it comes from someone close to you, sana unti unti mo matutunan kung paano protektahan yung sarili mo, hindi porket galing sa taong malalapit sayo, ibig sabihin tama na agad yung sinasabi nila tungkol sayo, hindi ko sinasabing bigla ka na lang dapat mawalan ng pake, I know it doesnt work that way and I know there will still be days na masasaktan ka pa rin talaga, at ok lang yon, hindi naman mawawala agad yung sakit na yan e, pero sana dumating yung time na kahit marinig mo man ulit yung mga masasakit na sinasabi nila sayo, hindi na siya maging ganon kasakit katulad ng nararamdaman mo ngayon tyka hindi na rin sana guluhin yung isip mo buong araw o buong linggo, pero habang di pa dumadating yung time na yon, sana tulungan mo rin yung sarili mo na makarating don, nasayo pa rin naman yung desisyon kung hahayaan mo lang masira yung peace of mind mo sa mga bagay na hindi mo naman kontrolado e o kung pipiliin mo unti unti bumangon para sa sarili mo, paniguradong sasabihin mo sakin na hindi madaling gawin yon kasi sinasabi mo na mas madaling sabihin na mawalan ng pake diba kesa gawin talaga, pero naniniwala pa rin ako na kaya mo yon re, hindi mo naman kailangang pilitin yung sarili mong hindi masaktan e, ang gusto ko lang sana huwag mong hayaan yung mga sinasabi sayo yung maging dahilan para questionin mo palagi yung existence mo, be kind to yourself re, youve already made it through difficult things, tyka siguro hindi mo lang napapansin kung gaano ka na kalayo from who you used to be, take your time and rest when you need to, some of the best things take time to come together naman, kaya kapag nawawalan ka ng momentum sa buhay, bumangon ka lang ulit, parang ml lang yan, ok lang matalo basta huwag mo lang ibato cp mo at mag quit sa laro haha unli bawi naman yan, sana hindi mo rin kinakalimutan na youre someone worth knowing, worth keeping, and someone who deserves good things, life is too short to spend all your energy on things you cant control, choose your peace whenever you can, huwag kang tanga at bulag, Im still proud of you kasi kahit sobrang bigat, hindi ka pa rin sumusuko kahit kadalasan mong sinasabi na ayaw mo na, I hope this year gives you more reasons to smile, tyka madami pang beses na mararamdaman mong proud ka sa sarili mo, happy birthday shang, sana dumami pa birthdays mo kasi madami ka pang bote na itataob haha, keep your head up re, Im always rooting for you.',
       SNAP_DISTANCE: 50,
       MOBILE_SNAP_DISTANCE: 70
     };
@@ -1652,19 +1704,6 @@
       neighbors: 2
     };
 
-    function playSong(id) {
-  const song = document.getElementById(id);
-
-  document.querySelectorAll('audio').forEach(audio => {
-    if (audio !== song) {
-      audio.pause();
-      audio.currentTime = 0;
-    }
-  });
-
-  song.play();
-}
-    
     let state = {
       heartClickCount: 0,
       isAudioPlaying: false,
@@ -2285,7 +2324,6 @@
       window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
-    // PHOTOS
     const PHOTOS = [
       {src: 'https://raw.githubusercontent.com/reredz/shang/main/download.jfif'},
       {src: 'https://raw.githubusercontent.com/reredz/shang/main/download (2).jfif'},
@@ -2440,6 +2478,48 @@ document.addEventListener('touchstart', () => {
 }, { once: true });
 
  document.addEventListener('DOMContentLoaded', function(){ const el=document.getElementById('passwordInput'); if(el){ el.addEventListener('keydown', function(event){ if(event.key=== 'Enter'){ event.preventDefault(); checkPassword(); } }); }});
+
+    let activeSong = null;
+    let activeSongButton = null;
+
+    function toggleSong(button, songId) {
+      const song = document.getElementById(songId);
+      if (!song) {
+        console.error('Song audio element not found:', songId);
+        return;
+      }
+
+      if (activeSong && activeSong !== song) {
+        activeSong.pause();
+        activeSong.currentTime = 0;
+        if (activeSongButton) {
+          activeSongButton.textContent = '▶ Play Song';
+          activeSongButton.classList.remove('playing');
+          const oldStatus = activeSongButton.parentElement.querySelector('.song-status');
+          if (oldStatus) oldStatus.textContent = 'Tap to listen';
+        }
+      }
+
+      if (!song.paused) {
+        song.pause();
+        button.textContent = '▶ Play Song';
+        button.classList.remove('playing');
+        button.parentElement.querySelector('.song-status').textContent = 'Paused';
+        return;
+      }
+
+      song.play().then(() => {
+        button.textContent = '⏸ Pause Song';
+        button.classList.add('playing');
+        button.parentElement.querySelector('.song-status').textContent = 'Now playing';
+        activeSong = song;
+        activeSongButton = button;
+      }).catch((error) => {
+        console.error('Could not play song:', error);
+        button.parentElement.querySelector('.song-status').textContent = 'Song file not found';
+      });
+    }
+
 </script>
 </body>
 </html>
