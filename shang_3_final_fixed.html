@@ -313,14 +313,14 @@
 <body>
   <div class="nav-tabs">
     <button class="nav-button active" onclick="showSection('home')">Home</button>
-    <button class="nav-button" onclick="showSection('messages')">Messages</button>
+    <button class="nav-button" onclick="showSection('messages')">Let it Out</button>
   </div>
 
   <!-- Home Section -->
   <div id="home" class="section active">
     <div class="container">
       <h1>Hi Babi! 💗</h1>
-      <p class="subtitle">Welcome to our special corner. Click "Messages" to chat with me!</p>
+      <p class="subtitle">Welcome to our special corner. Click "Let it Out" to chat with me!</p>
     </div>
   </div>
 
@@ -342,186 +342,186 @@
   </div>
 
   <script>
-    // Contextual response system - matches user input to personalized responses
+    // IMPROVED RESPONSE SYSTEM - CONTEXTUAL & HUMAN-LIKE, CONNECTED TO WHAT SHE SAID
     const responsePatterns = [
       {
-        keywords: ['love', 'like', 'care', 'adore'],
+        keywords: ['love', 'adore', 'love you', 'i love'],
         responses: [
-          "You know what? I love you too. So much. 💗",
-          "That feeling is mutual, babe. Always.",
-          "Hearing you say that makes my heart so happy. 💕",
-          "Me too, more than you know. Every single day.",
-          "You're my favorite person to love. ❤️"
+          "I love you too. With all my heart. 💗",
+          "You just made my day. I love you so much.",
+          "That's exactly what I needed to hear. I love you.",
+          "Right back at you, babe. Always and forever. 💕",
+          "Me too. More than words could ever say."
         ]
       },
       {
-        keywords: ['miss', 'miss you', 'miss you so'],
+        keywords: ['miss', 'miss you', 'missing you'],
         responses: [
-          "I miss you too. Every moment away from you feels long. 💔",
-          "Same here. Can't wait to see you again.",
-          "Miss you more, honestly. When can I see you?",
-          "You're always on my mind, even when we're apart. 😔",
-          "Missing you is like my full-time job right now. 😩"
+          "I miss you too... so much. When can I see you?",
+          "Me too. Can't wait to be with you again. 💔",
+          "Missing you just means I love you. See you soon?",
+          "Every second without you feels too long. 😔",
+          "You're always on my mind when you're not here."
         ]
       },
       {
-        keywords: ['hello', 'hi', 'hey', 'what\'s up'],
+        keywords: ['hello', 'hi', 'hey', 'sup', 'yo'],
         responses: [
-          "Hey! So happy you're here. What's on your mind?",
-          "Hi babe! How are you? Tell me everything. 😊",
-          "Hey! Just thinking about you, actually. 💗",
-          "Hi there! You made my day better just by saying hi.",
-          "Hey beautiful! What can I do for you?"
+          "Hey! I'm so happy you're here. What's up?",
+          "Hi babe! Good to see you. How are you?",
+          "Hey gorgeous! Just thinking about you actually. 💕",
+          "Hi! You just made my day better instantly.",
+          "Hey love! So glad you came to talk to me."
         ]
       },
       {
-        keywords: ['how are you', 'how\'re you', 'how are'],
+        keywords: ['how are you', 'how ru', 'you doing'],
         responses: [
-          "I'm doing amazing now that you're here. How are you?",
-          "Better now that I'm talking to you, honestly. 💕",
-          "I'm good! Really good. Thanks for asking, babe.",
-          "Can't complain when you're around. How are YOU though?",
-          "Honestly? I'm really happy talking to you right now."
+          "I'm better now that you're here talking to me. 😊",
+          "Really good! Especially since you asked. How are YOU?",
+          "Can't complain when you're around, babe.",
+          "Happy! Your presence always makes things better.",
+          "I'm good. But more importantly, how are you feeling?"
         ]
       },
       {
-        keywords: ['thank you', 'thanks', 'thank u', 'gracias', 'salamat'],
+        keywords: ['thank', 'thanks', 'thankyou', 'salamat', 'gracias'],
         responses: [
-          "You don't need to thank me. That's what I'm here for. 💗",
-          "Anytime, babe. Anything for you.",
-          "Of course! Always happy to help you.",
-          "That's what people who love each other do. 😊",
-          "No need to say thanks. I'd do anything for you."
+          "Of course, babe. You don't ever need to thank me.",
+          "Anything for you. That's what I'm here for. 💕",
+          "No need! I'd do it a million times over for you.",
+          "You're welcome, but honestly, I should be thanking YOU.",
+          "Happy to help. You mean everything to me."
         ]
       },
       {
-        keywords: ['sorry', 'apologize', 'i\'m sorry', 'my bad', 'forgive me'],
+        keywords: ['sorry', 'apologize', 'apologize', 'my bad'],
         responses: [
-          "Hey, we're good. I already forgave you. 💕",
+          "Hey, it's okay. I already forgave you, babe. 💕",
+          "Don't worry about it. We're good, I promise.",
+          "You know I could never stay upset with you.",
           "There's nothing to apologize for. We're okay.",
-          "Come on, you know I could never stay mad at you.",
-          "Water under the bridge, babe. Always.",
-          "I love you too much to ever hold anything against you."
+          "I love you too much to hold anything against you."
         ]
       },
       {
-        keywords: ['happy', 'excited', 'great', 'amazing', 'awesome'],
+        keywords: ['happy', 'excited', 'glad', 'amazing', 'awesome'],
         responses: [
-          "That makes ME happy just hearing about it! 😄",
-          "Yesss! I love your energy right now!",
-          "Tell me more! I want to hear everything!",
-          "Your happiness is contagious. I'm smiling too! 😊",
-          "This is the energy I needed today. Love it!"
+          "YES! I love your energy right now! Tell me more! 😄",
+          "That makes ME so happy hearing you like this!",
+          "Keep that energy going! You're radiating joy. 💕",
+          "I love when you're happy like this. Never lose that.",
+          "Your happiness is my happiness, babe. So proud of you!"
         ]
       },
       {
-        keywords: ['sad', 'down', 'upset', 'hurt', 'bad day'],
+        keywords: ['sad', 'down', 'upset', 'hurts', 'depressed'],
         responses: [
-          "Hey, I'm here for you. Tell me what's wrong. 💙",
-          "Don't be sad, babe. Let me help if I can.",
-          "I hate seeing you like this. What happened?",
-          "You know I'm always here to listen. Talk to me.",
-          "Whatever it is, we can get through it together. 💕"
+          "I'm here for you. Tell me what's wrong, okay? 💙",
+          "It breaks my heart seeing you sad. Talk to me?",
+          "Whatever it is, we can get through it together.",
+          "You don't have to face this alone. I'm here.",
+          "Tell me everything. I'm listening and I care."
         ]
       },
       {
-        keywords: ['night', 'sleep', 'goodnight', 'good night', 'sweet dreams'],
+        keywords: ['good night', 'goodnight', 'night', 'sleep', 'sweet dreams'],
         responses: [
-          "Sleep well, beautiful. Dream of me! 😴💗",
-          "Goodnight, babe. Sweet dreams ahead. 🌙",
-          "Rest well! Can't wait to talk to you tomorrow.",
-          "Sleep tight! You're the last thing on my mind. 💕",
+          "Sleep well, beautiful. Dream of me. 😴💗",
+          "Goodnight, love. Can't wait to see you tomorrow.",
+          "Sweet dreams! You're the last thing on my mind. 🌙",
+          "Sleep tight, babe. Rest well for me, okay?",
           "Night! May your dreams be as sweet as you are. ✨"
         ]
       },
       {
-        keywords: ['morning', 'good morning', 'morning babe', 'morning love'],
+        keywords: ['morning', 'good morning', 'wake up', 'gm'],
         responses: [
-          "Good morning, beautiful! Ready to make today amazing?",
-          "Morning! You're the first thing on my mind. 💕",
+          "Good morning, beautiful! You're first thing I think of! 💕",
+          "Morning babe! Ready to take on the day together?",
           "Hey gorgeous! How'd you sleep?",
-          "Good morning, love! Another day with you is a blessing.",
-          "Rise and shine! Let's make today count. 😊"
+          "Good morning! You made waking up so much better.",
+          "Morning! Another day to spend thinking about you. 😊"
         ]
       },
       {
-        keywords: ['meal', 'eat', 'hungry', 'food', 'lunch', 'dinner', 'breakfast'],
+        keywords: ['hungry', 'eat', 'food', 'dinner', 'lunch'],
         responses: [
-          "Haha you're so cute when you're hungry. Go grab something! 🍽️",
-          "Feed yourself, silly! Can't have my babe going hungry.",
-          "Go eat something yummy. I'll still be here. 😄",
-          "Aww, hungry? You're adorable. Go fuel up!",
-          "Never skip meals! Take care of yourself, okay? 💕"
+          "Go eat something, silly! I need you healthy. 🍽️",
+          "Take care of yourself and go grab something tasty!",
+          "You should eat. Take a break and fuel up, okay?",
+          "Go feed that beautiful face! You deserve it.",
+          "Hungry? Go get something you love. I'll be here."
         ]
       },
       {
-        keywords: ['busy', 'working', 'work', 'tired', 'exhausted'],
+        keywords: ['busy', 'work', 'working', 'tired', 'stressed'],
         responses: [
-          "Go handle your business, babe. I'll be here when you're done. 💪",
-          "You got this! Go crush it! 🔥",
-          "Take your time. Rest when you need to. We have all the time.",
-          "I'm proud of you for working so hard. Keep going!",
-          "Don't stress too much, okay? I'm proud of you no matter what."
+          "Go do your thing, babe. I'm proud of you. 💪",
+          "Work hard! I know you'll crush it like always.",
+          "Take a breather when you need to, okay? Don't overdo it.",
+          "I'm rooting for you. You got this! 🔥",
+          "Remember to take care of yourself too, not just work."
         ]
       },
       {
-        keywords: ['jealous', 'jelly', 'envious'],
+        keywords: ['jealous', 'jealousy', 'insecure'],
         responses: [
-          "Aww, you're cute when you're jealous. 😊 But you know it's only you.",
-          "Come on, you know there's no one else like you. Don't worry.",
-          "You have absolutely nothing to worry about, babe. Trust me.",
-          "Why would I look anywhere else? You're everything I want.",
-          "You're my one and only. That's it. No one else matters."
+          "You have nothing to worry about. It's only you. 💕",
+          "Baby, there's no one else like you. Ever.",
+          "Why would I look anywhere else? You're everything.",
+          "You're my one and only. Always have been.",
+          "Your heart is all I want. Trust me on that."
         ]
       },
       {
-        keywords: ['phone', 'message', 'text', 'call', 'facetime', 'video'],
+        keywords: ['forever', 'future', 'together', 'always'],
         responses: [
-          "I love getting messages from you. It always makes my day. 📱",
-          "You can reach out to me anytime, anywhere, okay?",
-          "I'm always just a message away from you, babe. 💕",
-          "Every notification from you makes me smile. 😊",
-          "You never have to wait for a reply from me. Ever."
+          "I want forever with you. No doubts, no hesitation.",
+          "Our future looks bright because you're in it. 💕",
+          "Forever with you sounds like a dream come true.",
+          "Always and forever, babe. That's the plan.",
+          "I can't wait to build our future together."
         ]
       },
       {
-        keywords: ['future', 'together', 'forever', 'tomorrow', 'next year'],
+        keywords: ['beautiful', 'pretty', 'cute', 'gorgeous', 'handsome'],
         responses: [
-          "I'm excited about our future, babe. You and me. Always.",
-          "Forever sounds about right for us. 💕",
-          "I can't wait to see what the future holds for us.",
-          "As long as you're by my side, I'm ready for anything.",
-          "Tomorrow, next year, forever - I want it all with you."
+          "Stop, you're making me blush! 😳 But not as gorgeous as you.",
+          "Right back at you times a million, babe! 💗",
+          "You have no idea how beautiful you are to me.",
+          "You're the gorgeous one here, trust me.",
+          "You literally take my breath away sometimes."
         ]
       },
       {
-        keywords: ['you\'re cute', 'you\'re beautiful', 'you\'re hot', 'you\'re perfect'],
+        keywords: ['what are you doing', 'whatcha up to', 'u doing'],
         responses: [
-          "Aww, you're making me blush now. 😳 But not as beautiful as you.",
-          "Right back at you, gorgeous. 💗",
-          "You're sweeter than anything. I can't even...",
-          "Says the most gorgeous person I know. 🥰",
-          "You're the real catch here, babe. Don't forget that."
+          "Just thinking about you, actually. Always. 💭",
+          "Nothing important. This is way better anyway. 😊",
+          "Waiting for you to message me, honestly. 💕",
+          "Just thinking about how lucky I am to have you.",
+          "Literally nothing beats talking to you right now."
         ]
       },
       {
-        keywords: ['what are you doing', 'whatcha doing', 'what\'re you up to'],
+        keywords: ['haha', 'lol', 'hehe', 'laugh', 'funny'],
         responses: [
-          "Just thinking about you, actually. You?",
-          "Nothing important. Way more fun talking to you though. 😊",
-          "Currently: being happy that you texted. 💕",
-          "Wasn't doing much, but now my day just got better!",
-          "Just passing time until I could talk to you. 😄"
+          "Your laugh is literally the best sound. Keep going! 😄",
+          "I love making you laugh. It's my favorite thing.",
+          "You're so funny and cute when you laugh like that.",
+          "That laugh of yours makes my whole day better.",
+          "You're adorable when you're laughing. Never stop. 🥰"
         ]
       },
       {
-        keywords: ['haha', 'lol', 'hehe', 'hahaha', '😂', '😄'],
+        keywords: ['picture', 'photo', 'send me', 'show me'],
         responses: [
-          "Your laugh is the best sound, honestly. Keep it up! 😄",
-          "I love making you laugh. It's my favorite. 💕",
-          "Haha! You're so funny and I love it.",
-          "That's the laugh I love. Don't ever stop.",
-          "You're too cute when you laugh. 🥰"
+          "I'd love to see anything from you. You always look amazing. 📸",
+          "Of course! I always love seeing your face.",
+          "Yes please! I need a dose of you right now. 💕",
+          "Absolutely! Send it. I'm ready to be amazed.",
+          "Can't wait! You always look beautiful to me."
         ]
       }
     ];
@@ -538,33 +538,30 @@
         }
       }
       
-      // Fallback responses if no pattern matches
+      // Fallback responses - still contextual and warm
       const fallbacks = [
-        "You always know what to say to make me smile. 💕",
-        "I like you more every single time we talk. 😊",
-        "You're special to me, you know that?",
-        "Can we talk like this forever? 💗",
-        "You make everything better, just by being you.",
-        "I'm glad you're in my life, seriously.",
-        "This is my favorite part of the day. ✨",
-        "You're worth every moment of my time. 💕",
-        "I could listen to you talk all day long.",
-        "You mean everything to me. 💕"
+        "You always know how to make me smile. 💕",
+        "I like you more every time we talk, you know that?",
+        "You're so special to me. Really.",
+        "I could talk to you all day long.",
+        "You make my heart so happy. 💗",
+        "Being with you (even like this) is my favorite.",
+        "You're honestly the best part of my day.",
+        "I'm so grateful you're in my life.",
+        "You make everything feel right. 💕",
+        "I just... really like you, okay?"
       ];
       
       return fallbacks[Math.floor(Math.random() * fallbacks.length)];
     }
 
     function showSection(sectionId) {
-      // Hide all sections
       const sections = document.querySelectorAll('.section');
       sections.forEach(section => section.classList.remove('active'));
       
-      // Hide all buttons' active state
       const buttons = document.querySelectorAll('.nav-button');
       buttons.forEach(button => button.classList.remove('active'));
       
-      // Show selected section
       document.getElementById(sectionId).classList.add('active');
       event.target.classList.add('active');
     }
@@ -575,11 +572,9 @@
       
       if (!userMessage) return;
       
-      // Add user message
       addMessage(userMessage, 'user');
       input.value = '';
       
-      // Simulate typing delay
       setTimeout(() => {
         const botResponse = getResponse(userMessage);
         addMessage(botResponse, 'bot');
@@ -598,7 +593,6 @@
       messageDiv.appendChild(bubble);
       chatMessages.appendChild(messageDiv);
       
-      // Scroll to bottom
       chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
