@@ -1370,7 +1370,7 @@
   <div id="passwordScreen">
     <div class="password-container">
       <h2 class="password-title">This is something I made just for you</h2>
-      <p class="password-subtitle">Try to guess shang before clicking the hint.</p>
+      <p class="password-subtitle">Try to guess before clicking the hint.</p>
       
       <div class="password-input-group">
         <input 
@@ -1397,7 +1397,7 @@
     <button class="nav-button" onclick="showSection('sky')">🌙 Sky</button>
     <button class="nav-button" onclick="showSection('nature')">🌿 Nature</button>
     <button class="nav-button" onclick="showSection('songs')">🎵 Songs</button>
-    <button class="nav-button" onclick="showSection('safe-place')">🤍 You Can Stay Here</button>
+    <button class="nav-button" onclick="showSection('safe-place')">🤍Space</button>
   </div>
 
   <div id="home" class="section active">
@@ -1524,7 +1524,7 @@
 
   <div id="nature" class="section">
     <div class="container">
-      <h2>🍃 Nature Knows Best 🍃</h2>
+      <h2>🌿 Nature Knows Best 🌿</h2>
       <p class="subtitle">If no one says it today, let nature say it instead.</p>
       
       <div class="nature-gallery">
@@ -1578,14 +1578,14 @@
         <div class="safe-hero">
           <div class="safe-eyebrow">a place to pause</div>
           <h2>You can stay here.</h2>
-          <p>You don't have to explain anything. Take your time.</p>
+          <p>Take a moment and breathe</p>
           <button class="safe-enter-btn" onclick="enterSafePlace()">I'm here</button>
         </div>
         <div class="safe-panel" id="safePanel">
           <h3 class="safe-question">What do you need right now?</h3>
           <div class="safe-options" id="safeOptions">
-            <button class="safe-option" onclick="safeChoice('vent')"><b>🌧️</b><strong>Let It Out</strong></button>
-            <button class="safe-option" onclick="safeChoice('clear')"><b>🧠</b><strong>Clear My Mind</strong></button>
+            <button class="safe-option" onclick="safeChoice('vent')"><b>🫂</b><strong>Let It Out</strong><br>Write down whatever has been weighing on you.</span></button>
+            <button class="safe-option" onclick="safeChoice('clear')"><b>🧠</b><strong>Clear Your Mind</strong><br>Set down the thoughts you don't want to carry right now.</span></button>
           </div>
           <div class="safe-response" id="safeResponse"></div>
           <button class="safe-exit" onclick="leaveSafePlace()">I'll come back later</button>
@@ -1837,7 +1837,7 @@
       if (type === 'vent') {
         response.innerHTML = `
           <h3>Let it out.</h3>
-          <p>You can write it exactly as it is. You don't have to make it sound okay.</p>
+          <p>There's no right or wrong way to express yourself here.</p>
           <textarea class="safe-textarea" id="safeVentText" placeholder="Write whatever is on your mind..."></textarea>
           <button class="safe-action" onclick="letItOutSafe()">Leave it here</button>
           <div id="safeVentMessage"></div>
@@ -1845,18 +1845,21 @@
         renderSavedSafeMessages(document.getElementById('safeVentMessage'));
       } else {
         response.innerHTML = `
-          <h3>Let's make some room.</h3>
-          <p>Tap a thought when you are ready to give yourself a little space from it.</p>
+          <h3>Take a little weight off your mind.</h3>
+          <p>Tap a thought whenever you're ready to let go of it, even just for this moment.</p>
           <div class="safe-thoughts">
-            <div class="safe-thought" data-response="You do not have to prepare for every possible ending. You can deal with what is real when it actually arrives." onclick="dismissThought(this)">What if everything goes wrong?</div>
-            <div class="safe-thought" data-response="You can care about what happened without punishing yourself for not doing more. You were working with what you knew and had at the time." onclick="dismissThought(this)">I should have done more.</div>
-            <div class="safe-thought" data-response="Some thoughts stay because they mattered to you. You do not have to force them away; you can simply let them be quieter for a while." onclick="dismissThought(this)">Why am I still thinking about this?</div>
-            <div class="safe-thought" data-response="You are not responsible for carrying everyone's expectations perfectly. Disappointing someone does not automatically mean you did something wrong." onclick="dismissThought(this)">I don't want to disappoint anyone.</div>
+            <div class="safe-thought" data-response="What if things turn out better than you expect? even if something doesn't go as planned, it doesn't mean you won't be able to handle it." onclick="dismissThought(this)">What if everything goes wrong?</div>
+            <div class="safe-thought" data-response="You did the best you could with what you knew and what you had at the time. Be kind to the version of yourself who was simply trying." onclick="dismissThought(this)">I should have done more.</div>
+            <div class="safe-thought" data-response="Some thoughts stay because they mattered to you, you don't have to force them away, you can let yourself rest without having all the answers." onclick="dismissThought(this)">Why am I still thinking about this?</div>
+            <div class="safe-thought" data-response="You are not responsible for carrying everyone's expectations, disappointing someone does not automatically mean you did something wrong." onclick="dismissThought(this)">I don't want to disappoint anyone.</div>
             <div class="safe-thought" data-response="Rest is not something you have to earn by reaching your limit. Being tired is already enough reason to pause." onclick="dismissThought(this)">I feel tired, but I can't rest.</div>
-            <div class="safe-thought" data-response="You do not have to keep everything inside just because you do not know how to explain it yet. You are allowed to need space and support." onclick="dismissThought(this)">Maybe I should just keep it to myself.</div>
-            <div class="safe-thought" data-response="You may not be able to stop every thought immediately. You can start by giving yourself one moment where you do not have to follow it." onclick="dismissThought(this)">I wish I could stop overthinking.</div>
-            <div class="safe-thought" data-response="Replaying it does not mean you are weak. Sometimes your mind is trying to understand something that hurt you. You can pause the replay for now." onclick="dismissThought(this)">I keep replaying what happened.</div>
+            <div class="safe-thought" data-response="You do not have to keep everything inside just because you do not know how to explain it yet, you are allowed to need space and support." onclick="dismissThought(this)">Maybe I should just keep it to myself.</div>
+            <div class="safe-thought" data-response="You may not be able to stop every thought immediately, you can start by not giving every thought your attention." onclick="dismissThought(this)">I wish I could stop overthinking.</div>
+            <div class="safe-thought" data-response="Replaying it does not mean you are weak, sometimes your mind is trying to understand something that hurt you, and It's okay to take a break from carrying it." onclick="dismissThought(this)">I keep replaying what happened.</div>
             <div class="safe-thought" data-response="You do not need to know the entire next step. Sometimes the next step is simply getting through this moment without demanding too much from yourself." onclick="dismissThought(this)">I don't know what to do next.</div>
+            <div class="safe-thought" data-response="Life is not a race. Moving at your own pace does not mean you are behind." onclick="dismissThought(this)">I feel like I'm falling behind.</div>
+            <div class="safe-thought" data-response="Maybe you don't want to disappear, maybe you just want a break from everything that feels heavy." onclick="dismissThought(this)">I wish I could disappear.</div>
+            <div class="safe-thought" data-response="Life can feel unfair when it keeps testing you, give yourself time, things can change in ways you cannot see yet." onclick="dismissThought(this)">Fucked my life.</div>
           </div>
           <p class="safe-clear-note" id="safeClearMessage">You don't have to deal with every thought right now.</p>
           <button class="safe-back" onclick="resetSafePlace()">← Go back</button>`;
@@ -1879,11 +1882,6 @@
       const lastItem = list ? list.lastElementChild : null;
       if (lastItem) lastItem.scrollIntoView({behavior:'smooth', block:'nearest'});
     }
-
-    function getConnectedResponse(text) {
-      const original = text.trim();
-      const lower = original.toLowerCase();
-      const has = (...words) => words.some(word => lower.includes(word));
 
     function escapeHtmlSafe(value) {
       return value.replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
@@ -2458,7 +2456,7 @@
     }
 
     function showPasswordHint() {
-      const hints = ['Clue 1: Starts with s', 'Clue 2: Nanickname ko na sayo dati', 'Clue 3: lagay mo na santomama'];
+      const hints = ['Clue : Starts with s', 'Clue : Nanickname ko na sayo dati', 'Clue : lagay mo na santomama'];
       const hintDisplay = document.getElementById('hintDisplay');
       const hintButton = document.getElementById('hintButton');
       
